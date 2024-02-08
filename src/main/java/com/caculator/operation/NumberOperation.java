@@ -9,11 +9,19 @@ public interface NumberOperation extends Operation {
 
     @Override
     default BigDecimal calculate(List<String> operands) {
-        List<BigDecimal> numbers = operands.stream()
-                .map(BigDecimal::new)
-                .toList();
+        List<BigDecimal> numbers = convertToNumbers(operands);
         return calculateNumbers(numbers);
     }
 
     BigDecimal calculateNumbers(List<BigDecimal> numbers);
+
+    private static List<BigDecimal> convertToNumbers(List<String> operands) {
+        try {
+            return operands.stream()
+                    .map(BigDecimal::new)
+                    .toList();
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("숫자만 입력해주세요.");
+        }
+    }
 }
