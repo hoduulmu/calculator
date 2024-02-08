@@ -9,6 +9,16 @@ class Calculator {
     private static final int SCALE = 11;
     private static final RoundingMode DEFAULT_ROUNDING_MODE = RoundingMode.DOWN;
 
+    public BigDecimal calculate(BigDecimal a, BigDecimal b, String operation) {
+        return switch (operation) {
+            case "+" -> add(a, b);
+            case "-" -> subtract(a, b);
+            case "*" -> multiply(a, b);
+            case "/" -> divide(a, b);
+            default -> throw new IllegalArgumentException("지원하지 않는 연산자입니다.");
+        };
+    }
+
     public BigDecimal add(BigDecimal a, BigDecimal b) {
         return a.add(b)
                 .stripTrailingZeros();
