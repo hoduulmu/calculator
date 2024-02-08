@@ -15,4 +15,8 @@ class Calculator {
     public BigDecimal multiply(BigDecimal a, BigDecimal b) {
         return a.multiply(b);
     }
+
+    public BigDecimal divide(BigDecimal a, BigDecimal b) {
+        return null;
+    }
 }

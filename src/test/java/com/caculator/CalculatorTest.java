@@ -63,4 +63,18 @@ class CalculatorTest {
         // then
         assertThat(actual).isEqualTo(new BigDecimal("3.2072612"));
     }
+
+    @Test
+    void 계산기는_두_수를_나눌_수_있다() {
+        // given
+        BigDecimal a = new BigDecimal("5");
+        BigDecimal b = new BigDecimal("2");
+        Calculator calculator = new Calculator();
+
+        // when
+        BigDecimal actual = calculator.divide(a, b);
+
+        // then
+        assertThat(actual).isEqualTo(new BigDecimal("2.5"));
+    }
 }
