@@ -11,4 +11,8 @@ class Calculator {
     public BigDecimal subtract(BigDecimal a, BigDecimal b) {
         return a.subtract(b);
     }
+
+    public BigDecimal multiply(BigDecimal a, BigDecimal b) {
+        return null;
+    }
 }
