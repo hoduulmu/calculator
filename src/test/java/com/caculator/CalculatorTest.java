@@ -77,4 +77,18 @@ class CalculatorTest {
         // then
         assertThat(actual).isEqualTo(new BigDecimal("2.5"));
     }
+
+    @Test
+    void 계산기는_두_수를_나눌_수_있고_계산기의_최대_스케일_범위를_넘어서지_않는다() {
+        // given
+        BigDecimal a = new BigDecimal("1");
+        BigDecimal b = new BigDecimal("3");
+        Calculator calculator = new Calculator();
+
+        // when
+        BigDecimal actual = calculator.divide(a, b);
+
+        // then
+        assertThat(actual).isEqualTo(new BigDecimal("0.33333333333"));
+    }
 }
