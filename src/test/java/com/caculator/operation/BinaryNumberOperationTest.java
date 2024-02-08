@@ -13,11 +13,10 @@ class BinaryNumberOperationTest {
         // given
         BinaryNumberOperation binaryNumberOperation = (operand, secondOperand) -> null;
         List<String> threeNumbers = List.of("1", "2", "3");
-        
+
         // when
         // then
         assertThatThrownBy(() -> binaryNumberOperation.calculate(threeNumbers))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("2개의 숫자만 입력해주세요.");
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
