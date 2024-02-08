@@ -1,5 +1,9 @@
 package com.caculator;
 
+import com.caculator.operation.impl.Add;
+import com.caculator.operation.impl.Divide;
+import com.caculator.operation.impl.Multiply;
+import com.caculator.operation.impl.SubTract;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -16,7 +20,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.add(a, b);
+        BigDecimal actual = new Add().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(BigDecimal.valueOf(3));
@@ -30,7 +34,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.add(a, b);
+        BigDecimal actual = new Add().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("3.624642706262478"));
@@ -44,7 +48,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.subtract(a, b);
+        BigDecimal actual = new SubTract().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("-1.131678646868761"));
@@ -58,7 +62,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.multiply(a, b);
+        BigDecimal actual = new Multiply().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("3.2072612"));
@@ -72,7 +76,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.divide(a, b);
+        BigDecimal actual = new Divide().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("2.5"));
@@ -86,7 +90,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
 
         // when
-        BigDecimal actual = calculator.divide(a, b);
+        BigDecimal actual = new Divide().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("0.33333333333"));
