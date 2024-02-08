@@ -28,4 +28,4 @@ Java 17, Gradle 8.4
 - 미적분
 
 #### 추후 고려사항
-- Operand Operation Operand 형식이 연속되어 들어오도록 변경 가능성이 있다면 게산 순서 등의 고려가 필요 (기획 확인 필요)
+- Operand Operation Operand 형식이 연속되어 들어오도록 변경 가능성이 있다면 계산 순서 등의 고려가 필요 (기획 확인 필요)
