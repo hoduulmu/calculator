@@ -35,18 +35,18 @@ class CalculatorTest {
         // then
         assertThat(actual).isEqualTo(new BigDecimal("3.624642706262478"));
     }
-    
+
     @Test
     void 계산기는_두_수를_뺄_수_있다() {
         // given
         BigDecimal a = new BigDecimal("1.312321353131239");
-        BigDecimal b = new BigDecimal("2.312321353131239");
+        BigDecimal b = new BigDecimal("2.444");
         Calculator calculator = new Calculator();
 
         // when
         BigDecimal actual = calculator.subtract(a, b);
 
         // then
-        assertThat(actual).isEqualTo(new BigDecimal("-1"));
+        assertThat(actual).isEqualTo(new BigDecimal("-1.131678646868761"));
     }
 }

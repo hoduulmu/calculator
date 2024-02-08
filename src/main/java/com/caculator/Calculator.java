@@ -7,4 +7,8 @@ class Calculator {
     public BigDecimal add(BigDecimal a, BigDecimal b) {
         return a.add(b);
     }
+
+    public BigDecimal subtract(BigDecimal a, BigDecimal b) {
+        return a.subtract(b);
+    }
 }
