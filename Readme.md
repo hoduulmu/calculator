@@ -1,5 +1,8 @@
 ## 계산기
 
+### 개발 스펙
+Java 17, Gradle 8.4
+
 ### 현 요구사항
 1. Operations
    1. Addition 
