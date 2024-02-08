@@ -1,4 +1,5 @@
-import org.assertj.core.api.Assertions;
+package com.caculator;
+
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,9 +20,4 @@ class CalculatorTest {
         assertThat(actual).isEqualTo(3);
     }
 
-    private static class Calculator {
-        int add(int a, int b) {
-            return a + b;
-        }
-    }
 }
