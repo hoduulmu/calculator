@@ -13,6 +13,6 @@ class Calculator {
     }
 
     public BigDecimal multiply(BigDecimal a, BigDecimal b) {
-        return null;
+        return a.multiply(b);
     }
 }
