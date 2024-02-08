@@ -7,7 +7,7 @@ import com.caculator.operation.impl.SubTract;
 
 import java.math.BigDecimal;
 
-class Calculator {
+public class Calculator {
 
     public BigDecimal calculate(BigDecimal a, BigDecimal b, String operation) {
         return switch (operation) {
