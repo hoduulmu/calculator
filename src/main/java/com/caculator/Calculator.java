@@ -1,7 +1,10 @@
 package com.caculator;
 
+import java.math.BigDecimal;
+
 class Calculator {
-    int add(int a, int b) {
-        return a + b;
+
+    public BigDecimal add(BigDecimal a, BigDecimal b) {
+        return a.add(b);
     }
 }
