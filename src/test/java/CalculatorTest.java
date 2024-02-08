@@ -18,4 +18,10 @@ class CalculatorTest {
         // then
         assertThat(actual).isEqualTo(3);
     }
+
+    private static class Calculator {
+        int add(int a, int b) {
+            return a + b;
+        }
+    }
 }
