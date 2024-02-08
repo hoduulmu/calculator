@@ -1,6 +1,6 @@
 package com.caculator.operation;
 
-import com.caculator.operation.impl.SubTract;
+import com.caculator.operation.impl.Subtract;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -16,7 +16,7 @@ class SubtractTest {
         BigDecimal b = new BigDecimal("2.444");
 
         // when
-        BigDecimal actual = new SubTract().calculateTwoNumbers(a, b);
+        BigDecimal actual = new Subtract().calculateTwoNumbers(a, b);
 
         // then
         assertThat(actual).isEqualTo(new BigDecimal("-1.131678646868761"));

@@ -4,7 +4,7 @@ import com.caculator.operation.BinaryNumberOperation;
 
 import java.math.BigDecimal;
 
-public class SubTract implements BinaryNumberOperation {
+public class Subtract implements BinaryNumberOperation {
 
     @Override
     public BigDecimal calculateTwoNumbers(BigDecimal operand, BigDecimal secondOperand) {
